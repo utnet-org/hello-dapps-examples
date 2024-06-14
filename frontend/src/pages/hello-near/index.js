@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 
-import { NearContext } from '@/context';
+import { UncContext } from '@/context';
 import styles from '@/styles/app.module.css';
 import { HelloContract } from '../../config';
 import { Cards } from '@/components/cards';
@@ -9,7 +9,7 @@ import { Cards } from '@/components/cards';
 const CONTRACT = HelloContract;
 
 export default function HelloNear() {
-  const { signedAccountId, wallet } = useContext(NearContext);
+  const { signedAccountId, wallet } = useContext(UncContext);
 
   const [greeting, setGreeting] = useState('loading...');
   const [newGreeting, setNewGreeting] = useState('loading...');

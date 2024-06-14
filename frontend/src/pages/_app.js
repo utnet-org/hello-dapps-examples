@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import '@/styles/globals.css';
-import { NearContext } from '@/context';
+import { UncContext } from '@/context';
 import { Navigation } from '@/components/navigation';
 
 import { Wallet } from '@/wallets/unc';
@@ -15,9 +15,9 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => { wallet.startUp(setSignedAccountId) }, []);
 
   return (
-    <NearContext.Provider value={{ wallet, signedAccountId }}>
+    <UncContext.Provider value={{ wallet, signedAccountId }}>
       <Navigation />
       <Component {...pageProps} />
-    </NearContext.Provider>
+    </UncContext.Provider>
   );
 }
