@@ -1,13 +1,13 @@
 # contract-rs
 
-cargo-near-new-project-description
+new-project-description
 
 ## How to Build Locally?
 
-Install [`cargo-near`](https://github.com/near/cargo-near) and run:
+Install [`unc CLI`](https://github.com/utnet-org/utility-cli-rs) and run:
 
 ```bash
-cargo near build
+unc dev-tool build
 ```
 
 ## How to Test Locally?
@@ -18,19 +18,17 @@ cargo test
 
 ## How to Deploy?
 
-To deploy manually, install [`cargo-near`](https://github.com/near/cargo-near) and run:
+To deploy manually, install [`unc CLI`](https://github.com/utnet-org/utility-cli-rs) and run:
 
 ```bash
 # Create a new account
-cargo near create-dev-account
+unc dev-tool create-dev-account
 
 # Deploy the contract on it
-cargo near deploy <account-id>
+unc dev-tool deploy <account-id>
 ```
 ## Useful Links
 
-- [cargo-near](https://github.com/near/cargo-near) - NEAR smart contract development toolkit for Rust
-- [near CLI](https://near.cli.rs) - Iteract with NEAR blockchain from command line
 - [NEAR Rust SDK Documentation](https://docs.near.org/sdk/rust/introduction)
 - [NEAR Documentation](https://docs.near.org)
 - [NEAR StackOverflow](https://stackoverflow.com/questions/tagged/nearprotocol)
