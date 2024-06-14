@@ -25,6 +25,7 @@ To deploy manually, install [`unc CLI`](https://github.com/utnet-org/utility-cli
 unc dev-tool create-dev-account
 
 # Deploy the contract on it
+## unc dev-tool deploy 377ac29dcdcf80f8741c987df93e6381bc4dd36686eff06780438d1fc10970ef without-init-call network-config testnet sign-with-keychain send
 unc dev-tool deploy <account-id>
 ```
 ## Useful Links
