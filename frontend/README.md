@@ -20,14 +20,14 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More about NEAR
+## Learn More about Utility
 
-To learn more about NEAR, take a look at the following resources:
+To learn more about Utility, take a look at the following resources:
 
-- [NEAR Documentation](https://docs.near.org) - learn about NEAR.
-- [Frontend Docs](https://docs.near.org/build/web3-apps/quickstart) - learn about this example.
+- [Utility Documentation](https://docs.xxx.org) - learn about Utility.
+- [Frontend Docs](https://docs.xxx.org/build/web3-apps/quickstart) - learn about this example.
 
-You can check out [the NEAR repository](https://github.com/near) - your feedback and contributions are welcome!
+You can check out [the Utility repository](https://github.com/utnet-org) - your feedback and contributions are welcome!
 
 ## Learn More about Next.js
 

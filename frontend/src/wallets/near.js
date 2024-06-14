@@ -6,8 +6,7 @@ import { distinctUntilChanged, map } from 'rxjs';
 import '@unc-wallet-selector/modal-ui/styles.css';
 import { setupModal } from '@unc-wallet-selector/modal-ui';
 import { setupWalletSelector } from '@unc-wallet-selector/core';
-import { setupHereWallet } from '@unc-wallet-selector/here-wallet';
-import { setupMyNearWallet } from '@unc-wallet-selector/my-near-wallet';
+import { setupNarwallets } from "@unc-wallet-selector/narwallets";
 
 const THIRTY_TGAS = '30000000000000';
 const NO_DEPOSIT = '0';
@@ -35,7 +34,7 @@ export class Wallet {
   startUp = async (accountChangeHook) => {
     this.selector = setupWalletSelector({
       network: this.networkId,
-      modules: [setupMyNearWallet(), setupHereWallet()]
+      modules: [setupNarwallets()]
     });
 
     const walletSelector = await this.selector;

@@ -1,8 +1,8 @@
-// Find all our documentation at https://docs.near.org
-use near_sdk::{log, near};
+// Find all our documentation at https://docs.xxx.org
+use unc_sdk::{log, unc};
 
 // Define the contract structure
-#[near(contract_state)]
+#[unc(contract_state)]
 pub struct Contract {
     greeting: String,
 }
@@ -17,7 +17,7 @@ impl Default for Contract {
 }
 
 // Implement the contract structure
-#[near]
+#[unc]
 impl Contract {
     // Public method - returns the greeting saved, defaulting to DEFAULT_GREETING
     pub fn get_greeting(&self) -> String {

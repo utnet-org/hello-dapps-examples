@@ -1,17 +1,17 @@
-use near_sdk::NearToken;
+use unc_sdk::UncToken;
 use serde_json::json;
 
-const FIVE_NEAR: NearToken = NearToken::from_near(5);
+const FIVE_UNC: UncToken = UncToken::from_unc(5);
 
 #[tokio::test]
 async fn test_contract_is_operational() -> Result<(), Box<dyn std::error::Error>> {
-    let sandbox = near_workspaces::sandbox().await?;
-    let contract_wasm = near_workspaces::compile_project("./").await?;
+    let sandbox = utility_workspaces::sandbox().await?;
+    let contract_wasm = utility_workspaces::compile_project("./").await?;
 
     let root = sandbox.root_account()?;
 
     let user_account = root.create_subaccount("user").transact().await?.unwrap();
-    let contract_account = root.create_subaccount("contract").initial_balance(FIVE_NEAR).transact().await?.unwrap();
+    let contract_account = root.create_subaccount("contract").initial_balance(FIVE_UNC).transact().await?.unwrap();
 
     let contract = contract_account.deploy(&contract_wasm).await?.unwrap();
 

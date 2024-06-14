@@ -1,9 +1,9 @@
 [package]
 name = "contract-rs"
-description = "Hello Near Example"
+description = "Hello Utility Example"
 version = "0.1.0"
 edition = "2021"
-# TODO: Fill out the repository field to help NEAR ecosystem tools to discover your project.
+# TODO: Fill out the repository field to help utnet ecosystem tools to discover your project.
 # NEP-0330 is automatically implemented for all contracts built with https://github.com/near/cargo-near.
 # Link to the repository will be available via `contract_source_metadata` view-function.
 #repository = "https://github.com/xxx/xxx"
@@ -13,11 +13,11 @@ crate-type = ["cdylib", "rlib"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-near-sdk = { version = "5.1.0", features = ["legacy"] }
+unc-sdk = { version = "2.3.0", features = ["legacy"] }
 
 [dev-dependencies]
-near-sdk = { version = "5.1.0", features = ["unit-testing"] }
-near-workspaces = { version = "0.10.0", features = ["unstable"] }
+unc-sdk = { version = "2.3.0", features = ["unit-testing"] }
+utility-workspaces = { version = "0.12.4", features = ["unstable"] }
 tokio = { version = "1.12.0", features = ["full"] }
 serde_json = "1"
 
