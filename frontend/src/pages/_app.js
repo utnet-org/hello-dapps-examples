@@ -4,10 +4,10 @@ import '@/styles/globals.css';
 import { NearContext } from '@/context';
 import { Navigation } from '@/components/navigation';
 
-import { Wallet } from '@/wallets/near';
-import { NetworkId, HelloNearContract } from '@/config';
+import { Wallet } from '@/wallets/unc';
+import { NetworkId, HelloContract } from '@/config';
 
-const wallet = new Wallet({ createAccessKeyFor: HelloNearContract, networkId: NetworkId });
+const wallet = new Wallet({ createAccessKeyFor: HelloContract, networkId: NetworkId });
 
 export default function MyApp({ Component, pageProps }) {
   const [signedAccountId, setSignedAccountId] = useState('');

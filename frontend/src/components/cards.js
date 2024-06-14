@@ -18,7 +18,7 @@ export const Cards = () => {
       </Link>
 
       <Link
-        href="/hello-near"
+        href="/hello-utility"
         className={styles.card}
         rel="noopener noreferrer"
       >
