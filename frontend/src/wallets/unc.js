@@ -79,7 +79,8 @@ export class Wallet {
    * @returns {Promise<JSON.value>} - the result of the method call
    */
   viewMethod = async ({ contractId, method, args = {} }) => {
-    const url = `https://rpc.${this.networkId}.near.org`;
+    //const url = `https://rpc.${this.networkId}.xxx.org`;
+    const url = `https://unc-test.jongun2038.win`;
     const provider = new providers.JsonRpcProvider({ url });
 
     let res = await provider.query({
