@@ -1,4 +1,4 @@
-// near api js
+// unc api js
 import { providers } from 'unc-api-js';
 
 // wallet selector
