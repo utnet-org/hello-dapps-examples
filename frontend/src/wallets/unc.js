@@ -1,12 +1,12 @@
 // unc api js
-import { providers } from 'unc-api-js';
+import { providers } from 'web3-api-js';
 
 // wallet selector
 import { distinctUntilChanged, map } from 'rxjs';
-import '@unc-wallet-selector/modal-ui/styles.css';
-import { setupModal } from '@unc-wallet-selector/modal-ui';
-import { setupWalletSelector } from '@unc-wallet-selector/core';
-import { setupNarwallets } from "@unc-wallet-selector/narwallets";
+import '@web3-wallet-selector/modal-ui/styles.css';
+import { setupModal } from '@web3-wallet-selector/modal-ui';
+import { setupWalletSelector } from '@web3-wallet-selector/core';
+import { setupNarwallets } from "@web3-wallet-selector/narwallets";
 
 const THIRTY_TGAS = '30000000000000';
 const NO_DEPOSIT = '0';
