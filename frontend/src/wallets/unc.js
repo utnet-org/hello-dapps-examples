@@ -1,4 +1,4 @@
-// unc api js
+// web3 api js
 import { providers } from 'web3-api-js';
 
 // wallet selector
@@ -6,7 +6,7 @@ import { distinctUntilChanged, map } from 'rxjs';
 import '@web3-wallet-selector/modal-ui/styles.css';
 import { setupModal } from '@web3-wallet-selector/modal-ui';
 import { setupWalletSelector } from '@web3-wallet-selector/core';
-import { setupNarwallets } from "@web3-wallet-selector/narwallets";
+import { setupMywallets } from "@web3-wallet-selector/mywallets";
 
 const THIRTY_TGAS = '30000000000000';
 const NO_DEPOSIT = '0';
@@ -34,7 +34,7 @@ export class Wallet {
   startUp = async (accountChangeHook) => {
     this.selector = setupWalletSelector({
       network: this.networkId,
-      modules: [setupNarwallets()]
+      modules: [setupMywallets()]
     });
 
     const walletSelector = await this.selector;
