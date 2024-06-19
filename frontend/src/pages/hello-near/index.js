@@ -8,7 +8,7 @@ import { Cards } from '@/components/cards';
 // Contract that the app will interact with
 const CONTRACT = HelloContract;
 
-export default function HelloNear() {
+export default function HelloUtility() {
   const { signedAccountId, wallet } = useContext(UncContext);
 
   const [greeting, setGreeting] = useState('loading...');

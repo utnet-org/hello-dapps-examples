@@ -107,7 +107,10 @@ export class Wallet {
   callMethod = async ({ contractId, method, args = {}, gas = THIRTY_TGAS, deposit = NO_DEPOSIT }) => {
     // Sign a transaction with the "FunctionCall" action
     const selectedWallet = await (await this.selector).wallet();
+    const accounts = await selectedWallet.getAccounts();
+    const accountId = accounts.length > 0 ? accounts[0].accountId : '';
     const outcome = await selectedWallet.signAndSendTransaction({
+      signerId: accountId,
       receiverId: contractId,
       actions: [
         {
