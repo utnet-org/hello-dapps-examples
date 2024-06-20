@@ -109,7 +109,7 @@ export class Wallet {
     const selectedWallet = await (await this.selector).wallet();
     const accounts = await selectedWallet.getAccounts();
     const accountId = accounts.length > 0 ? accounts[0].accountId : '';
-    const outcome = await selectedWallet.signAndSendTransaction({
+    const result = await selectedWallet.signAndSendTransaction({
       signerId: accountId,
       receiverId: contractId,
       actions: [
@@ -125,7 +125,10 @@ export class Wallet {
       ],
     });
 
-    return providers.getTransactionLastResult(outcome);
+    const { transaction_outcome: txo } = result;
+    console.log('txhash:', txo.id);
+    
+    return txo.id;
   };
 
   /**
