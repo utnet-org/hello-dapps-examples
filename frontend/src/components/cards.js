@@ -12,20 +12,20 @@ export const Cards = () => {
         rel="noopener noreferrer"
       >
         <h2>
-          Near Docs <span>-&gt;</span>
+          Near Docs Reference <span>-&gt;</span>
         </h2>
-        <p>Learn how this application works, and what you can build on Near.</p>
+        <p>Learn how this application works, and what you can build on Utility.</p>
       </Link>
 
       <Link
-        href="/hello-near"
+        href="/hello"
         className={styles.card}
         rel="noopener noreferrer"
       >
         <h2>
-          Near Integration <span>-&gt;</span>
+          Utility Net Integration <span>-&gt;</span>
         </h2>
-        <p>Discover how simple it is to interact with a Near smart contract.</p>
+        <p>Discover how simple it is to interact with a Utility smart contract.</p>
       </Link>
     </div>
   );

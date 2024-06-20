@@ -2,11 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState, useContext } from 'react';
 
-import { UncContext } from '@/context';
-import NearLogo from '/public/near-logo.svg';
+import { HelloContext } from '@/context';
+import UtneLogo from '/public/unc-logo.svg';
 
 export const Navigation = () => {
-  const { signedAccountId, wallet } = useContext(UncContext);
+  const { signedAccountId, wallet } = useContext(HelloContext);
   const [action, setAction] = useState(() => { });
   const [label, setLabel] = useState('Loading...');
 
@@ -26,7 +26,7 @@ export const Navigation = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <Link href="/" passHref legacyBehavior>
-          <Image priority src={NearLogo} alt="NEAR" width="30" height="24" className="d-inline-block align-text-top" />
+          <Image priority src={UtneLogo} alt="NEAR" width="30" height="24" className="d-inline-block align-text-top" />
         </Link>
         <div className='navbar-nav pt-1'>
           <button className="btn btn-secondary" onClick={action} > {label} </button>

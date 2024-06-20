@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 
-import { UncContext } from '@/context';
+import { HelloContext } from '@/context';
 import styles from '@/styles/app.module.css';
 import { HelloContract } from '../../config';
 import { Cards } from '@/components/cards';
@@ -9,7 +9,7 @@ import { Cards } from '@/components/cards';
 const CONTRACT = HelloContract;
 
 export default function HelloUtility() {
-  const { signedAccountId, wallet } = useContext(UncContext);
+  const { signedAccountId, wallet } = useContext(HelloContext);
 
   const [greeting, setGreeting] = useState('loading...');
   const [newGreeting, setNewGreeting] = useState('loading...');
@@ -30,7 +30,9 @@ export default function HelloUtility() {
 
   const saveGreeting = async () => {
     setShowSpinner(true);
-    await wallet.callMethod({ contractId: CONTRACT, method: 'set_greeting', args: { greeting: newGreeting } });
+    let txh = await wallet.callMethod({ contractId: CONTRACT, method: 'set_greeting', args: { greeting: newGreeting } });
+    /// FINAL
+    let result = await wallet.getTransactionResult(txh);
     const greeting = await wallet.viewMethod({ contractId: CONTRACT, method: 'get_greeting' });
     setGreeting(greeting);
     setShowSpinner(false);

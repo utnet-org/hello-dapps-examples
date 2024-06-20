@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
 import '@/styles/globals.css';
-import { UncContext } from '@/context';
+import { HelloContext } from '@/context';
 import { Navigation } from '@/components/navigation';
 
-import { Wallet } from '@/wallets/unc';
+import { Wallet } from '@/wallets/utility';
 import { NetworkId, HelloContract } from '@/config';
 
 const wallet = new Wallet({ createAccessKeyFor: HelloContract, networkId: NetworkId });
@@ -15,9 +15,9 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => { wallet.startUp(setSignedAccountId) }, []);
 
   return (
-    <UncContext.Provider value={{ wallet, signedAccountId }}>
+    <HelloContext.Provider value={{ wallet, signedAccountId }}>
       <Navigation />
       <Component {...pageProps} />
-    </UncContext.Provider>
+    </HelloContext.Provider>
   );
 }

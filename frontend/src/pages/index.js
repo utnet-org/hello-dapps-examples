@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import NearLogo from '/public/near.svg';
+import UtneLogo from '/public/unc.svg';
 import NextLogo from '/public/next.svg';
 import styles from '@/styles/app.module.css';
 import { Cards } from '@/components/cards';
@@ -13,8 +13,8 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src={NearLogo}
-          alt="NEAR Logo"
+          src={UtneLogo}
+          alt="UT-NET Logo"
           width={110 * 1.5}
           height={28 * 1.5}
           priority
