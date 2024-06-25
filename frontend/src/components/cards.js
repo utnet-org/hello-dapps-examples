@@ -12,7 +12,7 @@ export const Cards = () => {
         rel="noopener noreferrer"
       >
         <h2>
-          Near Docs Reference <span>-&gt;</span>
+          Utnet Docs Reference <span>-&gt;</span>
         </h2>
         <p>Learn how this application works, and what you can build on Utility.</p>
       </Link>

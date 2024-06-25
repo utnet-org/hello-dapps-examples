@@ -12,9 +12,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@web3-wallet-selector/core": "^1.0.3",
-    "@web3-wallet-selector/modal-ui": "^1.0.3",
-    "@web3-wallet-selector/mywallets": "^1.0.3",
+    "@web3-wallet-selector/core": "^1.0.4",
+    "@web3-wallet-selector/modal-ui": "^1.0.4",
+    "@web3-wallet-selector/mywallets": "^1.0.4",
     "bootstrap": "^5",
     "bootstrap-icons": "^1.11.3",
     "next": "^14.2.3",
